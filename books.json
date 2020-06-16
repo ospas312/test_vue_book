@@ -2,301 +2,241 @@
   {
     "_id": "5ee7e41912971045a04d5621",
     "index": 0,
-    "name": "Canby",
-    "pic": "http://placehold.it/32x32",
-    "author": {
-      "first": "Acevedo",
-      "last": "Trujillo"
-    },
-    "publisher": "Viagrand",
-    "date": "<ReferenceError: moment is not defined>",
+    "name": "Выразительный JavaScript.",
+    "pic": "https://cdn1.ozone.ru/s3/multimedia-t/wc1200/6000018281.jpg",
+    "author": "Хавербеке Марейн",
+    "publisher": "Питер",
+    "date": "2019",
     "likes": true,
     "rating": 8,
-    "about": "Cillum ipsum et ex aliqua. Et non nulla commodo aliquip ex. Dolor esse non consequat pariatur sint cillum commodo exercitation culpa culpa ad. Nisi cillum quis mollit ad occaecat consectetur eiusmod.\r\n"
+    "about": "Выразительный JavaScript» позволит глубоко погрузиться в тему, научиться писать красивый и эффективный код. Вы познакомитесь с синтаксисом, стрелочными и асинхронными функциями, итератором, шаблонными строками\r\n"
   },
   {
     "_id": "5ee7e4193c4f16beb5c2ca59",
     "index": 1,
-    "name": "Shelby",
-    "pic": "http://placehold.it/32x32",
-    "author": {
-      "first": "Maryellen",
-      "last": "Ashley"
-    },
-    "publisher": "Olucore",
-    "date": "<ReferenceError: moment is not defined>",
+    "name": "Изучаем программирование на JavaScript ",
+    "pic": "https://cdn1.ozone.ru/multimedia/wc1200/1011395255.jpg",
+    "author": "Фримен Эрик, Робсон Элизабет",
+    "publisher": "Питер",
+    "date": "2018",
     "likes": false,
     "rating": 3,
-    "about": "Sit in excepteur voluptate minim esse incididunt eu magna elit. Pariatur consectetur enim laborum exercitation proident magna. Labore est incididunt fugiat voluptate cillum occaecat. Est aute qui Lorem laboris quis mollit elit incididunt consequat. Aliqua enim adipisicing aliqua sunt nulla. Magna adipisicing excepteur occaecat laborum esse qui culpa commodo magna. Mollit in consectetur Lorem ipsum dolor in nulla ullamco aliquip dolor qui.\r\n"
+    "about": " ы готовы сделать шаг вперед в веб-программировании и перейти от верстки в HTML и CSS к созданию полноценных динамических страниц? Тогда пришло время познакомиться с самым 'горячим' языком программирования -\r\n"
   },
   {
     "_id": "5ee7e41982a30e04894281d9",
     "index": 2,
-    "name": "Utting",
-    "pic": "http://placehold.it/32x32",
-    "author": {
-      "first": "Lisa",
-      "last": "Gray"
-    },
-    "publisher": "Deminimum",
-    "date": "<ReferenceError: moment is not defined>",
+    "name": "Программирование на Java для начинающих",
+    "pic": "https://cdn1.ozone.ru/s3/multimedia-8/wc1200/6013603472.jpg",
+    "author": "Васильев Алексей",
+    "publisher": "Эксмо",
+    "date": "2017",
     "likes": true,
     "rating": 2,
-    "about": "Occaecat esse eiusmod sint ipsum adipisicing ea non esse dolore dolore consectetur adipisicing. Nulla in minim nisi est sunt et esse ipsum. Occaecat sunt laborum aute labore esse ad ullamco occaecat esse irure.\r\n"
+    "about": "Полный спектр сведений о языке Java с примерами и разбором задач от автора учебников-бестселлеров по языкам программирования Алексея Васильева. С помощью этой книги освоить язык Java сможет каждый желающий – от новичка до специалиста..\r\n"
   },
   {
     "_id": "5ee7e4193c2a89b78b7547cf",
     "index": 3,
-    "name": "Lafferty",
-    "pic": "http://placehold.it/32x32",
-    "author": {
-      "first": "Gardner",
-      "last": "Schwartz"
-    },
-    "publisher": "Zolarex",
-    "date": "<ReferenceError: moment is not defined>",
+    "name": "Java. Руководство для начинающих.",
+    "pic": "https://cdn1.ozone.ru/multimedia/wc1200/1025459620.jpg",
+    "author": "Шилдт Герберт",
+    "publisher": "Диалектика",
+    "date": "2018",
     "likes": false,
     "rating": 4,
-    "about": "Duis officia labore cupidatat elit aliquip ea ipsum officia mollit magna. Laboris quis ex est mollit culpa. Commodo occaecat quis ea eu ullamco officia nisi cillum occaecat nulla exercitation. Pariatur laboris duis irure incididunt et aliquip labore magna. Commodo sunt tempor ipsum ullamco Lorem tempor sint. Laborum labore est aliquip aliqua non dolore ad labore nulla laboris.\r\n"
+    "about": "Очередное издание бестселлера, обновленное с учетом всех новинок Java Platform, Standard Edition 9 (Java SE 9), позволит читателям в кратчайшие сроки приступить к программированию на языке Java. Опытнейший...\r\n"
   },
   {
     "_id": "5ee7e4198b12d8747475da2c",
     "index": 4,
-    "name": "Crawfordsville",
-    "pic": "http://placehold.it/32x32",
-    "author": {
-      "first": "Lorrie",
-      "last": "Cameron"
-    },
+    "name": "Python для чайников",
+    "pic": "https://cdn1.ozone.ru/multimedia/wc1200/1033218246.jpg",
+    "author": "Мюллер Джон Поль",
     "publisher": "Cincyr",
-    "date": "<ReferenceError: moment is not defined>",
+    "date": "2019",
     "likes": true,
     "rating": 7,
-    "about": "Elit culpa culpa cillum aliquip quis fugiat. Do consequat consectetur ut elit officia. Excepteur excepteur occaecat eiusmod cupidatat exercitation cupidatat sit aliqua labore do cupidatat fugiat nulla. Et enim consequat consectetur dolore nostrud minim ullamco consectetur ea. Proident do officia Lorem aliqua sunt fugiat ut.\r\n"
+    "about": "Python - это мощный язык программирования, на котором можно создавать самые разные приложения, не зависящие от платформы. Он идеально подходит для новичков, особенно если нужно быстро научиться программировать и начать создавать реальные проекты. Благодаря пошаговым инструкциям, приведенным в книге, вы сможете в краткие сроки освоить основы языка.\r\n"
   },
   {
     "_id": "5ee7e4195fde0e47edf84e3a",
     "index": 5,
-    "name": "Charco",
-    "pic": "http://placehold.it/32x32",
-    "author": {
-      "first": "Colette",
-      "last": "Vang"
-    },
-    "publisher": "Geologix",
-    "date": "<ReferenceError: moment is not defined>",
+    "name": "React в действии",
+    "pic": "https://cdn1.ozone.ru/multimedia/wc1200/1025461464.jpg",
+    "author": "Томас Марк Тиленс",
+    "publisher": "Питер",
+    "date": "2019",
     "likes": false,
     "rating": 9,
-    "about": "Sunt eiusmod in excepteur irure id esse fugiat nisi voluptate. Non excepteur enim amet ea id consequat. Anim culpa voluptate et ex. Proident velit veniam qui sunt amet esse nulla reprehenderit pariatur velit do. Tempor adipisicing labore pariatur mollit enim do in eiusmod amet. Dolor exercitation sit et proident pariatur do in eiusmod irure exercitation officia veniam culpa dolor. Esse consequat excepteur dolore qui mollit sunt amet nisi.\r\n"
+    "about": "Книга 'React в действии' знакомит фронтенд-разработчиков с фреймворком React и смежными инструментами. Сначала вы познакомитесь с библиотекой React, затем освежите материал о некоторых фундаментальных идеях в данном контексте и узнаете о работе с компонентами. Вы на практике освоите чистый React (без транспиляции, без синтаксических помощников), перейдете от простейших статических компонентов к динамическим и интерактивным.\r\n"
   },
   {
     "_id": "5ee7e419a96303b8c40d09d0",
     "index": 6,
-    "name": "Defiance",
-    "pic": "http://placehold.it/32x32",
-    "author": {
-      "first": "Harper",
-      "last": "Davidson"
-    },
-    "publisher": "Waab",
-    "date": "<ReferenceError: moment is not defined>",
+    "name": "Vue.js в действии",
+    "pic": "https://cdn1.ozone.ru/multimedia/wc1200/1037901079.jpg",
+    "author": "Листуон Бенджамин, Хэнчетт Эрик",
+    "publisher": "Питер",
+    "date": "2019",
     "likes": true,
     "rating": 1,
-    "about": "Dolore veniam veniam officia amet ea ut enim in aute commodo exercitation laboris consequat. Nostrud sint quis esse officia quis mollit. Sint cupidatat do aliqua nostrud duis enim eiusmod non aliquip quis minim. Voluptate mollit esse ullamco velit magna. Pariatur laboris Lorem veniam non laborum.\r\n"
+    "about": "Vue.js - это популярная библиотека для создания пользовательских интерфейсов. В ней значительно переосмыслены реактивные идеи, впервые появившиеся в React.js.\r\n"
   },
   {
     "_id": "5ee7e41971a391f90f2d8e7f",
     "index": 7,
-    "name": "Gerber",
-    "pic": "http://placehold.it/32x32",
-    "author": {
-      "first": "Shepard",
-      "last": "Kinney"
-    },
-    "publisher": "Xymonk",
-    "date": "<ReferenceError: moment is not defined>",
+    "name": "Грокаем алгоритмы.",
+    "pic": "https://cdn1.ozone.ru/multimedia/wc1200/1037901676.jpg",
+    "author": "Бхаргава Адитья",
+    "publisher": "Питер",
+    "date": "2019",
     "likes": false,
     "rating": 10,
-    "about": "Eiusmod cillum id labore eu elit cillum ullamco Lorem. Elit consectetur et id amet ipsum cillum excepteur. Fugiat exercitation fugiat sunt id id dolore nostrud dolor nulla. Commodo minim culpa Lorem aute do enim duis tempor nostrud enim. Labore occaecat quis veniam sunt culpa non Lorem sint ex do nisi cillum. Nulla velit esse veniam et occaecat cupidatat duis.\r\n"
+    "about": "Алгоритмы - это всего лишь последовательность решения задач, и большинство таких задач уже были кем-то решены, протестированы и проверены. Можно, конечно, погрузиться в глубокую философию гениального Кнута, изучить многостраничные фолианты с доказательствами и обоснованиями, но хотите ли вы тратить на это свое время? \r\n"
   },
   {
     "_id": "5ee7e4192806a8baeb629028",
     "index": 8,
-    "name": "Mulberry",
-    "pic": "http://placehold.it/32x32",
-    "author": {
-      "first": "Bette",
-      "last": "Conner"
-    },
-    "publisher": "Roughies",
-    "date": "<ReferenceError: moment is not defined>",
+    "name": "Секреты JavaScript ниндзя",
+    "pic": "https://cdn1.ozone.ru/multimedia/wc1200/1020193797.jpg",
+    "author": "Бибо Беэр, Марас Иосип, Резиг Джон",
+    "publisher": "Вильямс",
+    "date": "2018",
     "likes": true,
     "rating": 1,
-    "about": "Sit voluptate qui ipsum duis cillum voluptate cillum sint excepteur qui. Ipsum id aliquip et sunt excepteur commodo incididunt Lorem in Lorem. Adipisicing nostrud ad voluptate labore pariatur ullamco do irure elit dolor pariatur dolore. Ipsum laboris ullamco laboris esse occaecat pariatur et esse ad sint.\r\n"
+    "about": "Язык JavaScript быстро становится универсальным для разработки различных типов приложений, будь то для веб, облака, настольных систем или мобильных устройств. Стать профессиональным разработчиком приложений на JavaScript - означает, приобрести ряд эффективных навыков, которые могут пригодиться во всех этих предметных областях.\r\n"
   },
   {
     "_id": "5ee7e419300d90f46fae2b5c",
     "index": 9,
-    "name": "Dragoon",
-    "pic": "http://placehold.it/32x32",
-    "author": {
-      "first": "Debbie",
-      "last": "Sexton"
-    },
-    "publisher": "Songbird",
-    "date": "<ReferenceError: moment is not defined>",
+    "name": "HTML и CSS. Разработка и дизайн веб-сайтов",
+    "pic": "https://cdn1.ozone.ru/s3/multimedia-c/wc1200/6012364680.jpg",
+    "author": "Дакетт Джон",
+    "publisher": "Эксмо",
+    "date": "2019",
     "likes": true,
     "rating": 3,
-    "about": "Laboris sunt occaecat nulla esse dolore ex minim. Lorem labore aute qui dolore commodo elit. Quis ad duis nisi ea culpa aliquip aliquip ea est.\r\n"
+    "about": "Эта книга — самый простой и интересный способ изучить HTML и CSS. Независимо от стоящей перед вами задачи: спроектировать и разработать веб-сайт с нуля или получить больше контроля над уже существующим сайтом, эта книга поможет вам создать привлекательный, дружелюбный к пользователю веб-контент. Хотя код веб-страниц может немного вас пугать, загляните в книгу, и вы увидите, насколько это руководство отличается от большинства остальных книг по веб-дизайну.\r\n"
   },
   {
     "_id": "5ee7e4198109423d8c4a3486",
     "index": 10,
-    "name": "Darlington",
-    "pic": "http://placehold.it/32x32",
-    "author": {
-      "first": "Aurelia",
-      "last": "Osborn"
-    },
-    "publisher": "Netur",
-    "date": "<ReferenceError: moment is not defined>",
+    "name": "Совершенный код.",
+    "pic": "https://cdn1.ozone.ru/multimedia/wc1200/1020973362.jpg",
+    "author": "Макконнелл Стив",
+    "publisher": "БХВ-Петербург",
+    "date": "2017",
     "likes": false,
     "rating": 0,
-    "about": "Lorem fugiat eu adipisicing ut magna. Laboris ut proident proident proident ipsum laboris nisi. Duis et pariatur nulla qui id aliquip esse. Eiusmod consequat ad cillum consequat occaecat est aliqua dolor pariatur officia. Eu irure velit do veniam eu ex dolore fugiat esse dolor. Quis minim elit dolore irure.\r\n"
+    "about": "Более 10 лет первое издание этой книги считалось одним из лучших практических руководств по программированию. Сейчас эта книга полностью обновлена с учетом современных тенденций и технологий и дополнена сотнями новых примеров, иллюстрирующих искусство и науку программирования. \r\n"
   },
   {
     "_id": "5ee7e419ed32dd3871988ceb",
     "index": 11,
-    "name": "Waiohinu",
-    "pic": "http://placehold.it/32x32",
-    "author": {
-      "first": "Heidi",
-      "last": "Barlow"
-    },
-    "publisher": "Codax",
-    "date": "<ReferenceError: moment is not defined>",
+    "name": "Чистая архитектура.",
+    "pic": "https://cdn1.ozone.ru/s3/multimedia-z/wc1200/6013193891.jpg",
+    "author": "Мартин Роберт",
+    "publisher": "Питер",
+    "date": "2018",
     "likes": false,
     "rating": 4,
-    "about": "Id cillum consequat deserunt qui culpa elit excepteur mollit veniam exercitation commodo. Ea aliquip cillum et enim sint consectetur. Laborum ad deserunt sit duis commodo excepteur nostrud culpa cupidatat nostrud ad elit. Eu cupidatat sunt ex exercitation officia elit officia. Elit ea fugiat est tempor veniam sit reprehenderit culpa aute exercitation nisi deserunt. Sit proident ad officia dolor aute dolor aliqua ex culpa.\r\n"
+    "about": "«Идеальный программист» и «Чистый код» – легендарные бестселлеры Роберта Мартина – рассказывают, как достичь высот профессионализма. «Чистая архитектура» продолжает эту тему, но не предлагает несколько вариантов в стиле «решай сам», а объясняет, что именно следует делать, по какой причине и почему именно такое решение станет принципиально важным для вашего успеха.\r\n"
   },
   {
     "_id": "5ee7e41984049fc243834f60",
     "index": 12,
-    "name": "Echo",
-    "pic": "http://placehold.it/32x32",
-    "author": {
-      "first": "Adela",
-      "last": "Glass"
-    },
-    "publisher": "Ozean",
-    "date": "<ReferenceError: moment is not defined>",
+    "name": "Алгоритмы. Построение и анализ",
+    "pic": "https://cdn1.ozone.ru/multimedia/wc1200/1037908807.jpg",
+    "author": "Кормен Томас Х., Лейзерсон Чарльз И., Ривест Рональд Л., Штайн Клиффорд",
+    "publisher": "Вильямс",
+    "date": "2019",
     "likes": true,
     "rating": 7,
-    "about": "Voluptate anim labore aute id occaecat sit. Eu eu et nisi deserunt. Eiusmod enim qui enim quis ipsum esse esse.\r\n"
+    "about": "Книга 'Алгоритмы. Построение и анализ' удачно объединяет в себе полноту охвата и строгость изложения материала. Много книг, посвященных алгоритмам, отличается строгостью изложения материала, но страдает определенной неполнотой; другие книги охватывают огромный объем материала, но недостаточно строго излагают его.\r\n"
   },
   {
     "_id": "5ee7e4192efdc829dbe946c5",
     "index": 13,
-    "name": "Elrama",
-    "pic": "http://placehold.it/32x32",
-    "author": {
-      "first": "Mooney",
-      "last": "Scott"
-    },
-    "publisher": "Poochies",
-    "date": "<ReferenceError: moment is not defined>",
+    "name": "BIG DATA.",
+    "pic": "https://cdn1.ozone.ru/s3/multimedia-p/wc1200/6013015357.jpg",
+    "author": "Вайгенд Андреас",
+    "publisher": "Эксмо",
+    "date": "2017",
     "likes": true,
     "rating": 0,
-    "about": "Nulla anim sit Lorem consectetur eiusmod tempor. Ex exercitation consequat exercitation velit occaecat magna consectetur consequat dolor et ullamco velit eu in. Nulla dolor veniam dolore est aute eu reprehenderit est est cillum. Nostrud irure laborum commodo officia deserunt laboris esse velit incididunt est.\r\n"
+    "about": "Как жить в мире, где информацию о тебе может получить кто угодно и когда угодно? Ведущий мировой эксперт по будущему Big Data Андреас Вайгенд знает ответ.\r\n"
   },
   {
     "_id": "5ee7e4195e6ff6e7233d0444",
     "index": 14,
-    "name": "Helen",
-    "pic": "http://placehold.it/32x32",
-    "author": {
-      "first": "Atkins",
-      "last": "Langley"
-    },
-    "publisher": "Zillar",
-    "date": "<ReferenceError: moment is not defined>",
+    "name": "Data Science. Наука о данных с нуля.",
+    "pic": "https://cdn1.ozone.ru/multimedia/wc1200/1018972164.jpg",
+    "author": "Грас Джоэл",
+    "publisher": "БХВ-Петербург",
+    "date": "2019",
     "likes": true,
     "rating": 2,
-    "about": "Ipsum consectetur mollit in laboris deserunt et. Magna est laborum velit aliquip nulla qui. Consequat non duis irure in laborum exercitation qui nisi Lorem officia anim. Dolore amet velit culpa id cupidatat minim amet.\r\n"
+    "about": "Книга позволяет изучить науку о данных (Data Science) и применить полученные знания на практике. Она написана так, что способствует погружению в Data Science аналитика, фактически не обладающего глубокими знаниями в этой прикладной дисциплине.\r\n"
   },
   {
     "_id": "5ee7e419916a7d5e8d4bfc0f",
     "index": 15,
-    "name": "Tampico",
-    "pic": "http://placehold.it/32x32",
-    "author": {
-      "first": "Fanny",
-      "last": "Melendez"
-    },
-    "publisher": "Imperium",
-    "date": "<ReferenceError: moment is not defined>",
+    "name": "MySQL по максимуму",
+    "pic": "https://cdn1.ozone.ru/multimedia/wc1200/1037901029.jpg",
+    "author": "Шварц Бэрон, Зайцев Петр, Ткаченко Вадим",
+    "publisher": "Питер",
+    "date": "2018",
     "likes": true,
     "rating": 1,
-    "about": "Ipsum ullamco laborum aute aliquip Lorem velit. Ea esse minim voluptate excepteur id ut velit deserunt magna ipsum incididunt consequat. Mollit consectetur cupidatat anim est tempor mollit culpa eu nostrud irure cillum eu. Fugiat laborum nulla magna anim dolore adipisicing cillum Lorem aute pariatur. Occaecat ut mollit exercitation esse dolor ut do incididunt consequat esse occaecat eu non fugiat. Ipsum sint fugiat do sint.\r\n"
+    "about": "Познакомьтесь с продвинутыми приемами работы с MySQL: разработкой схем, индексов и запросов для настройки сервера, операционной системы и аппаратной части, способами масштабирования приложений и репликацией, балансировкой нагрузки, обеспечением доступности и восстановлением после отказов.\r\n"
   },
   {
     "_id": "5ee7e419d8628847ac1fd166",
     "index": 16,
-    "name": "Libertytown",
-    "pic": "http://placehold.it/32x32",
-    "author": {
-      "first": "Greer",
-      "last": "Humphrey"
-    },
-    "publisher": "Utara",
-    "date": "<ReferenceError: moment is not defined>",
+    "name": "Структуры данных и алгоритмы в Java",
+    "pic": "https://cdn1.ozone.ru/multimedia/wc1200/1007528381.jpg",
+    "author": "Лафоре Роберт",
+    "publisher": "Питер",
+    "date": "2018",
     "likes": false,
     "rating": 2,
-    "about": "Ut officia duis dolore adipisicing culpa. Incididunt officia occaecat nostrud laborum excepteur ullamco sit. Qui commodo magna do ullamco enim cupidatat. Excepteur et esse reprehenderit aliqua.\r\n"
+    "about": "Второе издание одной из самых авторитетных книг по программированию посвящено использованию структур данных и алгоритмов. Алгоритмы - это основа программирования, определяющая, каким образом разрабатываемое программное обеспечение будет использовать структуры данных.\r\n"
   },
   {
     "_id": "5ee7e419eeb69981d093731f",
     "index": 17,
-    "name": "Caroline",
-    "pic": "http://placehold.it/32x32",
-    "author": {
-      "first": "Josie",
-      "last": "Hull"
-    },
-    "publisher": "Techade",
-    "date": "<ReferenceError: moment is not defined>",
+    "name": "Spring 5 для профессионалов",
+    "pic": "https://cdn1.ozone.ru/s3/multimedia-5/wc1200/6013596053.jpg",
+    "author": "Хо Кларенс, Шефер Крис, Козмина Юлиана, Харроп Роб",
+    "publisher": "Диалектика-Вильямс",
+    "date": "2019",
     "likes": false,
     "rating": 8,
-    "about": "Nisi dolor veniam mollit id enim id occaecat ut occaecat ullamco exercitation sint voluptate consectetur. Exercitation exercitation minim exercitation fugiat. Aliquip aliqua elit exercitation enim ipsum.\r\n"
+    "about": "Эта книга воплощает знания и опыт работы авторов с каркасом Spring Framework и сопутствующими технологиями удаленного взаимодействия, Hibernate, EJB и пр. Она дает возможность читателю не только усвоить основные понятия и принципы работы с Spring Framework, но и научиться рационально пользоваться этим каркасом для построения различных уровней и частей корпоративных приложений на языке Java, включая обработку транзакций, представление веб-содержимого и прочего содержимого, развертывание и многое другое.\r\n"
   },
   {
     "_id": "5ee7e419f54c2b696c1406b8",
     "index": 18,
-    "name": "Nettie",
-    "pic": "http://placehold.it/32x32",
-    "author": {
-      "first": "Cantu",
-      "last": "Duffy"
-    },
-    "publisher": "Pharmex",
-    "date": "<ReferenceError: moment is not defined>",
+    "name": "Компьютерные сети",
+    "pic": "https://cdn1.ozone.ru/s3/multimedia-v/wc1200/6013400599.jpg",
+    "author": "Таненбаум Эндрю, Уэзеролл Дэвид",
+    "publisher": "Питер",
+    "date": "2017",
     "likes": false,
     "rating": 3,
-    "about": "Dolor cillum sint nisi cillum culpa. Sint consectetur nostrud sit voluptate ad sunt nulla anim ipsum Lorem sint. Non quis reprehenderit sunt irure eu consectetur nulla. Pariatur Lorem proident ex id non sunt. Ex aliqua in dolor laborum nostrud mollit.\r\n"
+    "about": "Перед вами – очередное, пятое издание самой авторитетной книги по современным сетевым технологиям, написанной признанным экспертом в этой области Эндрю Таненбаумом в соавторстве с профессором Вашингтонского университета Дэвидом Уэзероллом. Первая версия этого классического труда появилась на свет в далеком 1980 году, и с тех пор каждое издание книги неизменно становилось бестселлером и использовалось в качестве базового учебника в ведущих технических вузах.\r\n"
   },
   {
     "_id": "5ee7e419c1b7f67e4de56296",
     "index": 19,
-    "name": "Buxton",
-    "pic": "http://placehold.it/32x32",
-    "author": {
-      "first": "Deana",
-      "last": "Murphy"
-    },
+    "name": "Изучаем PHP 7.",
+    "pic": "https://cdn1.ozone.ru/multimedia/wc1200/1016798871.jpg",
+    "author": "Давид Скляр",
     "publisher": "Magnemo",
-    "date": "<ReferenceError: moment is not defined>",
+    "date": "2017",
     "likes": false,
     "rating": 4,
-    "about": "Exercitation Lorem id eu veniam voluptate labore sint dolor et Lorem cillum. In aute magna officia mollit eu qui laboris labore tempor. Ut proident eu nulla elit pariatur culpa dolor. Aliquip amet anim dolore labore et ea est. Pariatur deserunt aute proident est est fugiat aliquip incididunt occaecat incididunt qui ad mollit do. Deserunt ipsum sit laboris nulla.\r\n"
+    "about": "Эта книга адресована тем, кто только начинает изучать язык программирования PHP. Ее автор, Дэвид Скляр, являющийся также соавтором книги PHP Cookbook, раскрывает особенности данного языка, которые следует знать для построения динамических веб-сайтов, размещаемых на веб-серверах.\r\n"
   }
 ]
