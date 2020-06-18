@@ -11,6 +11,9 @@ export const mutations = {
   setState(state, { name, value }) {
     return (state[name] = value);
   },
+  saveLike(state, { index }) {
+    state.books[index].likes = !state.books[index].likes;
+  },
 };
 /*
 export const actions = {
@@ -34,6 +37,12 @@ export const actions = {
   },
 };
 */
+
+export const actions = {
+  async send_likes({ commit }, { index }) {
+    await commit('saveLike', { index });
+  },
+};
 export const getters = {
   getBooks(state){
     return state.books;

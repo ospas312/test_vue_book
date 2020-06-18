@@ -1,139 +1,175 @@
-<!--    <book
-          v-for ="book in booksToRender"
-          :key="book.index"
-          :bookImageSrc="`${baseUrl}${book.pic}`"
-          :storyImageAlt="book.name"
-          :storyTitle="book.name"
-          :bookLike="book.likes"
-          :bookRating="book.rating"
-          :bookDate="book.date"
-          :bookAuthor="book.author"
-          :bookPublish="book.publisher"
-
-          :bookClass="'book'"
-          :bookImageClass="'book__image'"
-          :bookAuthorClass="'book__author'"
-          :bookTitleClass="'book__title'"
-          @bookClick="storyClickHandler(story.id)"
-        />
-          -->
 <template>
-  <div :class="storyClass">
-    <div class="storyImagesClass">
+  <div :class="bookClass">
+    <div class="book__img">
       <img
-        :class="storyImageClass"
-        :src="storyImageSrc"
-        :alt="storyImageAlt"
-        @click="$emit('storyClick')"
+        :class="bookImageClass"
+        :src="bookImageSrc"
+        :alt="bookImageAlt"
+        @click="$emit('bookClick')"
       />
+      <button :class="['book__like', bookLike ? 'book__button-like' : 'book__button-notlike']" @click="$emit('bookLike')"></button>
+      <p :class="bookRatingClass">{{ bookRating }}</p>
     </div>
-    <p :class="storyAuthorClass">{{ storyAuthor }}</p>
-    <p :class="storyTitleClass">{{ storyTitle }}</p>
-    <p v-if="storyText != undefined" :class="storyTextClass">{{ storyText }}</p>
+    <p :class="bookTitleClass">{{ bookTitle }}</p>
+    <p :class="bookAuthorClass">Автор {{ bookAuthor }}</p>
+    <p :class="bookSubtitle">Год выпуска {{ bookDate }}</p>
+    <p :class="bookSubtitle">Издательство {{ bookPublish }}</p>
   </div>
 </template>
-
 <script>
 export default {
   props: [
-    /*'storyClass',
-    'storyImageClass',
-    'storyImageSrc',
-    'storyImageAlt',
-    'storyAuthor',
-    'storyTitle',
-    'storyTextClass',
-    'storyText',
-    'storyTitleClass',
-    'storyAuthorClass',
-    */
-
-    bookImageSrc,
-    storyImageAlt,
-    storyTitle,
-    bookLike,
-    bookRating,
-    bookDate,
-    bookAuthor,
-    bookPublish,
-
-    bookClass,
-    bookImageClass,
-    bookAuthorClass,
-    bookTitleClass,
-          /*@storyClick="storyClickHandler(story.id)"*/
-
+    'bookImageSrc',
+    'bookImageAlt',
+    'bookTitle',
+    'bookLike',
+    'bookRating',
+    'bookDate',
+    'bookAuthor',
+    'bookPublish',
+    'bookSubtitle',
+    'bookClass',
+    'bookRatingClass',
+    'bookClassButton',
+    'bookImageClass',
+    'bookAuthorClass',
+    'bookTitleClass',
   ],
+  methods: {
+    click(){
+      console.log('1');
+      const { books } = this.$store.state;
+      console.log(books.books);
+    },
+  },
 };
 </script>
 
 <style scoped>
-.story__image:hover {
+.book__like{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+    border: none;
+    opacity: 0.9;
+    background: #fff;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+/*.book__like:hover{
+  color: aqua;
+  transition: all .3s ease;
+  transform: scale(1.04);
+}*/
+.book__like::before{
+  content: "\f08a";
+  font-family: FontAwesome;
+  font-size: 16px;
+}
+.book__like:hover::before{
+  font-size: 20px;
+  color: red;
+  transition: all .3s ease;
+}
+
+.book__rating{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.book__button-like{
+  border-radius: 8px;
+  color: #f07c29;
+
+}
+.book__button-notlike{
+  border-radius: 8px;
+  color: rgb(99, 97, 96);
+}
+
+.book__image:hover {
   cursor: pointer;
   transform: scale(1.04);
 }
-.storyImagesClass {
-  width: 100%;
+.book__image {
+  /*width: 100%;
   position: relative;
-  padding-bottom: 100%;
+  padding-bottom: 100%;*/
   margin-bottom: 20px;
 }
-.story {
+.book {
   display: flex;
   flex-direction: column;
+  padding: 15px;
 }
 
-.story_detail {
+.book_detail {
   flex-direction: row;
 }
-.story__image {
+.book__image {
   /*width: 100%;
   height: auto;
   object-fit: contain;
   margin-bottom: 20px;*/
-  position: absolute;
+  /*position: absolute;
   top: 0;
-  left: 0;
+  left: 0;*/
   width: 100%;
-  height: 100%;
+  height: 360px;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 1024px) {
-  .story__image {
+  .book__image {
     margin-bottom: 14px;
   }
 }
 
-.story__image:hover {
+.book__image:hover {
   cursor: pointer;
 }
-.story__author {
-  max-width: 300px;
+.book__author {
   font-family: Inter;
   font-style: normal;
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 22px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
   color: #000000;
-  margin: 0 0 14px 0;
+  margin: 15px 0 0;
 }
 
 @media screen and (max-width: 1024px) {
-  .story__author {
+  .book__author {
     font-size: 18px;
     line-height: 22px;
   }
 }
 
-.story__title {
-  max-width: 250px;
+.book__title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: #181717;
+  margin: 0;
+}
+.book__img{
+  position: relative;
+
+}
+.book__subtitle {
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 18px;
-  color: #666666;
-  margin: 0;
+  color: #181717;
+  margin: 10px 0 0;
 }
 </style>

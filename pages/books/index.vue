@@ -1,66 +1,55 @@
 <template>
   <container>
-    <div class="stories-index-container">
-      <h2 class="stories__title" @click="click">Библиотека</h2>
-      <div class="stories__search-container">
-        <InputTest class="stories__search-input" type="text" v-model="search" />
+    <div class="books__container">
+      <h2 class="books__title" @click="click">Библиотека</h2>
+      <div class="books__search">
+        <InputTest class="books__search-input" type="text" v-model="search" />
         <nxt-button
-          buttonClass="stories__search-button"
+          buttonClass="books__search-button"
           buttonType="button"
           @btnClick="filteredList"
           >Поиск</nxt-button
         >
       </div>
       <h2
-        class="stories__message stories__message-title"
-        v-if="this.initiallyFilteredStories.length === 0"
+        class="books__message books__message-title"
+        v-if="this.initiallyFilteredBooks.length === 0"
       >
         Ничего не найдено
       </h2>
       <p
-        class="stories__message stories__message-subtitle"
-        v-if="this.initiallyFilteredStories.length === 0"
+        class="books__message books__message-subtitle"
+        v-if="this.initiallyFilteredBooks.length === 0"
       >
         Попробуйте еще раз
       </p>
-      <div class="stories__container">
-        <!--    <Book
+      <div class="books__container-card">
+        <Book
           v-for ="book in booksToRender"
           :key="book.index"
-          :bookImageSrc="`${baseUrl}${book.pic}`"
-          :storyImageAlt="book.name"
-          :storyTitle="book.name"
+          :bookImageSrc="`${book.pic}`"
+          :bookImageAlt="book.name"
+          :bookTitle="book.name"
           :bookLike="book.likes"
           :bookRating="book.rating"
           :bookDate="book.date"
           :bookAuthor="book.author"
           :bookPublish="book.publisher"
-
+          :bookRatingClass="'book__rating'"
           :bookClass="'book'"
+          :bookClassButton="'book__button'"
           :bookImageClass="'book__image'"
           :bookAuthorClass="'book__author'"
           :bookTitleClass="'book__title'"
-          @bookClick="storyClickHandler(book.index)"
-        />
-          -->
-        <story
-          v-for="story in storiesToRender"
-          :key="story.id"
-          :storyImageSrc="`${baseUrl}${story.ImageUrl[0].url}`"
-          :storyImageAlt="story.author"
-          :storyAuthor="story.author"
-          :storyTitle="story.title"
-          :storyClass="'story'"
-          :storyImageClass="'story__image'"
-          :storyAuthorClass="'story__author'"
-          :storyTitleClass="'story__title'"
-          @storyClick="storyClickHandler(story.id)"
+          :bookSubtitle="'book__subtitle'"
+          @bookClick="bookClickHandler(book.index)"
+          @bookLike="bookClickLike(book.index)"
         />
       </div>
       <stories-nav
-        v-if="this.initiallyFilteredStories.length != 0"
-        :totalStories="this.initiallyFilteredStories.length"
-        :limitPerPage="storiesOnPage"
+        v-if="this.initiallyFilteredBooks.length != 0"
+        :totalStories="this.initiallyFilteredBooks.length"
+        :limitPerPage="booksOnPage"
         @onPageChange="changeStartIndex"
       >
       </stories-nav>
@@ -86,104 +75,97 @@ export default {
   },
   data() {
     return {
-      appliedStoriesName: '',
+      appliedBooksName: '',
       search: '',
-      storiesOnPage: 8,
+      booksOnPage: 8,
       startIndex: 0,
-      storiesOnPageDesktop: 16,
-      storiesOnPageTabled: 12,
-      storiesOnPageMobile: 9,
-      baseUrl: process.env.BASE_URL,
+      booksOnPageDesktop: 12,
+      booksOnPageTabled: 8,
+      booksOnPageMobile: 6,
+      /*baseUrl: process.env.BASE_URL,*/
     };
   },
-  beforeMount() {
-    this.$store.dispatch('stories/fetchStories');
-  },
   computed: {
-    stories: function() {
-      return this.$store.getters['stories/getStories'];
+    books: function() {
+      return this.$store.getters['books/getBooks'];
     },
-    currentStory() {
-      return this.stories.filter(item => item['id'] === this.$route.params.id);
+    currentBook() {
+      return this.books.filter(item => item['index'] === this.$route.params.index);
     },
-    totalStories() {
-      return this.stories.length;
-      //return this.initiallyFilteredStories.length;
+    totalBooks() {
+      return this.books.length;
     },
     pagesAmount() {
-      return Math.ceil(this.totalStories / this.storiesOnPage);
+      return Math.ceil(this.totalBooks / this.booksOnPage);
     },
-    /*storiesToRender() {
-      return this.stories.filter(
+    booksToRender() {
+      const { books } = this.$store.state;
+      return this.initiallyFilteredBooks.filter(
         (item, index) =>
           index >= this.startIndex &&
-          index <= this.startIndex + this.storiesOnPage - 1
+          index <= this.startIndex + this.booksOnPage - 1
       );
-    },*/
-    initiallyFilteredStories() {
-      const { stories } = this.$store.state;
-      if (!this.appliedStoriesName || this.appliedStoriesName === '') {
-        return stories.stories;
+    },
+    initiallyFilteredBooks() {
+      const { books } = this.$store.state;
+      if (!this.appliedBooksName || this.appliedBooksName === '') {
+        return books.books;
       }
-      return stories.stories.filter(
+      return books.books.filter(
         (item, index) =>
-          item.author.toLowerCase().indexOf(this.appliedStoriesName) > -1
-      );
-    },
-    storiesToRender() {
-      const { stories } = this.$store.state;
-      return this.initiallyFilteredStories.filter(
-        (item, index) =>
-          index >= this.startIndex &&
-          index <= this.startIndex + this.storiesOnPage - 1
+          item.author.toLowerCase().indexOf(this.appliedBooksName) > -1
       );
     },
   },
   methods: {
     changeStartIndex(index) {
-      this.startIndex = (index - 1) * this.storiesOnPage;
+      this.startIndex = (index - 1) * this.booksOnPage;
     },
-    storyClickHandler(id) {
-      this.$router.push(`/stories/${id}`);
+    bookClickHandler(id) {
+      this.$router.push(`/books/${index}`);
     },
+    async bookClickLike(index) {
+      await this.$store.dispatch('books/send_likes', { index } );
+    },
+
     filteredList() {
-      this.appliedStoriesName = this.search.toLowerCase();
+      this.appliedBooksName = this.search.toLowerCase();
     },
     click(){
       console.log('1');
-      const { stories } = this.$store.state;
-      console.log(stories.books);
+      const { books } = this.$store.state;
+      console.log(books.books);
     },
   },
   mounted: function() {
     /*Adding listeners on resizing page */
     window.addEventListener('resize', () => {
       if (window.innerWidth > 768) {
-        this.storiesOnPage = this.storiesOnPageDesktop;
+        this.booksOnPage = this.booksOnPageDesktop;
       }
       if (window.innerWidth <= 768 && window.innerWidth > 320) {
-        this.storiesOnPage = this.storiesOnPageTabled;
+        this.booksOnPage = this.booksOnPageTabled;
       }
       if (window.innerWidth <= 320) {
-        this.storiesOnPage = this.storiesOnPageMobile;
+        this.booksOnPage = this.booksOnPageMobile;
       }
     });
     /* Setting initiate value on page load */
     if (window.innerWidth > 768) {
-      this.storiesOnPage = this.storiesOnPageDesktop;
+      this.booksOnPage = this.booksOnPageDesktop;
     }
     if (window.innerWidth <= 768 && window.innerWidth > 320) {
-      this.storiesOnPage = this.storiesOnPageTabled;
+      this.booksOnPage = this.booksOnPageTabled;
     }
     if (window.innerWidth <= 320) {
-      this.storiesOnPage = this.storiesOnPageMobile;
+      this.booksOnPage = this.booksOnPageMobile;
     }
   },
 };
 </script>
 
 <style scoped>
-.stories__message {
+.books__message {
   text-align: center;
   font-family: Inter;
   font-style: normal;
@@ -191,11 +173,11 @@ export default {
   font-size: 48px;
   line-height: 58px;
 }
-.stories__message-subtitle {
+.books__message-subtitle {
   font-size: 16px;
   line-height: 20px;
 }
-.stories-index-container {
+.books-index-container {
   margin: 100px 0 0;
   font-family: 'Inter', monospace;
   -ms-text-size-adjust: 100%;
@@ -204,7 +186,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
-.stories__search-container {
+.books__search {
   margin: 60px 0 70px;
   display: grid;
   grid-template-columns: 1fr 226px;
@@ -212,30 +194,30 @@ export default {
   column-gap: 20px;
 }
 @media screen and (max-width: 1280px) {
-  .stories__search-container {
+  .books__search {
     margin: 50px 0 60px;
     grid-template-rows: 48px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .stories__search-container {
+  .books__search {
     margin: 40px 0 46px;
     grid-template-columns: 1fr 208px;
     grid-template-rows: 46px;
   }
 }
 @media screen and (max-width: 768px) {
-  .stories__search-container {
+  .books__search {
     margin: 50px 0 60px;
   }
 }
 @media screen and (max-width: 600px) {
-  .stories__search-container {
+  .books__search {
     grid-template-columns: 1fr 48px;
     column-gap: 6px;
   }
 }
-.stories__search-input {
+.books__search-input {
   width: 100%;
   box-sizing: border-box;
   border: 1px solid #e8e8e8;
@@ -246,7 +228,7 @@ export default {
   line-height: 20px;
   outline: none;
 }
-.stories__search-button {
+.books__search-button {
   width: 100%;
   background-color: #613a93;
   color: white;
@@ -258,7 +240,7 @@ export default {
   cursor: pointer;
 }
 @media screen and (max-width: 600px) {
-  .stories__search-button {
+  .books__search-button {
     width: 100%;
     color: transparent;
     background-image: url('/search.svg');
@@ -267,52 +249,52 @@ export default {
     background-position: center;
   }
 }
-.stories__search-button:hover {
+.books__search-button:hover {
   opacity: 0.9;
   transition: opacity 0.3s ease;
 }
-.stories__container {
+.books__container-card {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 40px;
-  row-gap: 70px;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
   margin-top: 60px;
 }
 @media screen and (max-width: 1280px) {
-  .stories__container {
-    column-gap: 40px;
-    row-gap: 60px;
+  .books__container-card {
+    column-gap: 20px;
+    row-gap: 20px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .stories__container {
-    column-gap: 30px;
-    row-gap: 46px;
+  .books__container-card {
+    column-gap: 20px;
+    row-gap: 20px;
   }
 }
 @media screen and (max-width: 768px) {
-  .stories__container {
+  .books__container-card {
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
-    row-gap: 40px;
+    row-gap: 20px;
   }
 }
 @media screen and (max-width: 600px) {
-  .stories__container {
+  .books__container-card {
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
     row-gap: 40px;
   }
 }
 @media screen and (max-width: 320px) {
-  .stories__container {
+  .books__container-card {
     grid-template-columns: 1fr;
     column-gap: 20px;
     row-gap: 30px;
   }
 }
 @media screen and (max-width: 600px) {
-  .stories__search-button {
+  .books__search-button {
     width: 48px;
     color: transparent;
     background-image: url('/search.svg');
@@ -321,7 +303,7 @@ export default {
     background-position: center;
   }
 }
-.stories__title {
+.books__title {
   margin: 0 0 70px 0;
   max-width: 413px;
   font-family: Inter;
@@ -332,27 +314,27 @@ export default {
   color: #000000;
 }
 @media screen and (max-width: 1280px) {
-  .stories__title {
+  .books__title {
     margin: 0 0 60px 0;
     font-size: 28px;
     line-height: 32px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .stories__title {
+  .books__title {
     margin: 0 0 46px 0;
     font-size: 24px;
     line-height: 28px;
   }
 }
 @media screen and (max-width: 768px) {
-  .stories__title {
+  .books__title {
     margin: 0 auto 60px;
     text-align: center;
   }
 }
 @media screen and (max-width: 320px) {
-  .stories__title {
+  .books__title {
     margin: 0 auto 40px;
     font-size: 18px;
     line-height: 21px;
