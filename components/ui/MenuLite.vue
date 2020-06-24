@@ -5,7 +5,10 @@
         <nuxt-link class="menu__link" to="/">Главная</nuxt-link>
       </li>
       <li class="menu__list-item">
-        <nuxt-link class="menu__link" to="/stories">Книги</nuxt-link>
+        <nuxt-link class="menu__link" to="/books">Книги</nuxt-link>
+      </li>
+      <li class="menu__list-item">
+        <nuxt-link class="menu__link" to="/likes">Избранное</nuxt-link>
       </li>
     </ul>
   </nav>

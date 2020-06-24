@@ -88,7 +88,7 @@ export default {
   font-family: Inter;
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 21px;
   line-height: 20px;
   color: black;
   margin: 0;

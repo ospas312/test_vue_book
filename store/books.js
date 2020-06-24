@@ -3,44 +3,43 @@ import book from '../books.json'
 
 export const state = () => ({
   books: book,
-  currentLesson: {},
   currentBook: {},
+  viewBook: {},
 });
 
 export const mutations = {
   setState(state, { name, value }) {
     return (state[name] = value);
   },
+  quickView(state, { index }) {
+    state.viewBook = state.books[index];
+  },
   saveLike(state, { index }) {
     state.books[index].likes = !state.books[index].likes;
   },
-};
-/*
-export const actions = {
-  fetchStories(state) {
-    return axios.get(`${process.env.BASE_URL}/stories`).then(response => {
-      return state.commit('setState', {
-        name: 'books',
-        value: response.data,
-      });
-    });
+  upRating(state, { index }) {
+    state.books[index].rating = state.books[index].rating + 1;
   },
-  fetchStoryWithId(state, payload) {
-    return axios
-      .get(`${process.env.BASE_URL}/stories/${payload.id}`)
-      .then(response => {
-        return state.commit('setState', {
-          name: 'currentStory',
-          value: response.data,
-        });
-      });
+  downRating(state, { index }) {
+    state.books[index].rating = state.books[index].rating - 1;
   },
-};
-*/
+  currentB(state, { id }) {
+    state.currentBook = state.books[id];
 
+  },
+};
 export const actions = {
   async send_likes({ commit }, { index }) {
     await commit('saveLike', { index });
+  },
+  async send_uprating({ commit }, { index }) {
+    await commit('upRating', { index });
+  },
+  async send_downrating({ commit }, { index }) {
+    await commit('downRating', { index });
+  },
+  async BookWithId({ state, commit }, { id }) {
+    await commit('currentB', { id });
   },
 };
 export const getters = {
@@ -49,5 +48,8 @@ export const getters = {
   },
   getCurrentBook(state) {
     return state.currentBook;
+  },
+  getViewBook(state) {
+    return state.viewBook;
   },
 };

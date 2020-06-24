@@ -1,7 +1,7 @@
 <template>
   <container>
     <div class="books__container">
-      <h2 class="books__title">Библиотека</h2>
+      <h2 class="books__title" @click="click">Библиотека</h2>
       <div class="books__search">
         <InputTest class="books__search-input" type="text" v-model="search" @keyup.enter="filteredList" @keypress.enter="click" />
         <nxt-button
@@ -165,7 +165,7 @@ export default {
   },
   computed: {
     books() {
-      return this.$store.getters['books/getBooks'];
+      return this.$store.getters['books/getBooks'].filter(item => item.likes == true);
     },
     currentBook() {
       return this.books.filter(item => item.index === this.$route.params.id);
@@ -233,6 +233,9 @@ export default {
     }
   },
   methods: {
+    click(){
+      console.log(this.books);
+    },
     changeStartIndex(index) {
       this.startIndex = (index - 1) * this.booksOnPage;
     },
@@ -281,8 +284,9 @@ export default {
       this.$store.commit('books/quickView', { index });
       this.$store.commit('popup/open');
     },
+
   },
-  mounted: function() {
+  mounted() {
     /*Adding listeners on resizing page */
     window.addEventListener('resize', () => {
       if (window.innerWidth > 768) {
@@ -418,7 +422,6 @@ export default {
   margin-top: 60px;
 }
 .books__title {
-  /*margin: 0 0 70px 0;*/
   max-width: 413px;
   font-family: Inter;
   font-style: normal;

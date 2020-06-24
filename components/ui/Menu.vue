@@ -5,15 +5,10 @@
         <nuxt-link class="menu__link" to="/">Главная</nuxt-link>
       </li>
       <li class="menu__li">
-        <nuxt-link class="menu__link" to="/stories">Истории</nuxt-link>
-      </li>
-      <li class="menu__li">
         <nuxt-link class="menu__link" to="/books">Книги</nuxt-link>
       </li>
-      <li class="menu__li" @click="open">
-        <nxt-button buttonType="button" buttonClass="menu__button"
-          >Авторизоватся</nxt-button
-        >
+      <li class="menu__li">
+        <nuxt-link class="menu__link" to="/likes">Избранное</nuxt-link>
       </li>
     </ul>
     <nxt-button

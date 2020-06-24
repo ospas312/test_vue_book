@@ -7,8 +7,9 @@
         :alt="bookImageAlt"
         @click="$emit('bookClick')"
       />
+      <button class="book__popup" @click="$emit('bookquick')"></button>
       <button :class="['book__like', bookLike ? 'book__button-like' : 'book__button-notlike']" @click="$emit('bookLike')"></button>
-      <p :class="bookRatingClass">{{ bookRating }}</p>
+      <p :class="bookRatingClass"></p>
     </div>
     <p :class="bookTitleClass">{{ bookTitle }}</p>
     <p :class="bookAuthorClass">Автор {{ bookAuthor }}</p>
@@ -35,17 +36,35 @@ export default {
     'bookAuthorClass',
     'bookTitleClass',
   ],
-  methods: {
-    click(){
-      console.log('1');
-      const { books } = this.$store.state;
-      console.log(books.books);
-    },
-  },
 };
 </script>
 
 <style scoped>
+.book__popup{
+  position: absolute ;
+  top: 49%;
+  left: 49%;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  transform: translate(-50%,-50%) scale(0.5);
+  opacity: 0.3;
+  border: none;
+  background-color: #b94f08;
+  outline: none;
+  cursor: zoom-in;
+}
+.book__popup:hover{
+  content: 'quick view';
+  transform: translate(-50%,-50%) scale(2);
+  opacity: 0.8;
+}
+.book__popup:hover::before{
+  content: 'quick view';
+  font-size: 10px;
+  color: #fff;
+  opacity: 1.9;
+}
 .book__like{
     position: absolute;
     top: 0;
@@ -59,11 +78,6 @@ export default {
     cursor: pointer;
     transition: all .3s ease;
 }
-/*.book__like:hover{
-  color: aqua;
-  transition: all .3s ease;
-  transform: scale(1.04);
-}*/
 .book__like::before{
   content: "\f08a";
   font-family: FontAwesome;
@@ -72,9 +86,19 @@ export default {
 .book__like:hover::before{
   font-size: 20px;
   color: red;
-  transition: all .3s ease;
+  animation: heartbeat 1s infinite;
 }
-
+@keyframes heartbeat {
+  0% {
+    font-size: 16px;
+  }
+  20% {
+    font-size: 18px
+  }
+  40% {
+    font-size: 24px
+  }
+}
 .book__rating{
     position: absolute;
     top: 0;
@@ -119,15 +143,9 @@ export default {
   top: 0;
   left: 0;*/
   width: 100%;
-  height: 360px;
-  object-fit: cover;
+  max-height: 360px;
+  object-fit: contain;
   border-radius: 10px;
-}
-
-@media screen and (max-width: 1024px) {
-  .book__image {
-    margin-bottom: 14px;
-  }
 }
 
 .book__image:hover {
@@ -171,5 +189,40 @@ export default {
   line-height: 18px;
   color: #181717;
   margin: 10px 0 0;
+}
+@media screen and (max-width: 1280px) {
+
+}
+@media screen and (max-width: 1024px) {
+  .book__author {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .book__image {
+    margin-bottom: 14px;
+  }
+  .book__image {
+    height: 350px;
+  }
+  .book{
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+.book__image {
+    object-fit: contain;
+  }
+  .book__title{
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .book__author {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .book__subtitle {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 </style>

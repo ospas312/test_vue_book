@@ -1,24 +1,19 @@
 <template>
   <div class="container">
-    <Stories />
+    <Books />
   </div>
 </template>
 
 <script>
-import Stories from '@/components/Stories.vue';
+import Books from '@/components/Books.vue';
 export default {
   components: {
-    Stories,
+    Books,
   },
   data() {
     return {};
   },
   methods: {},
-  /*computed:{
-    popUpOpened() {
-      return this.$store.getters['popup/getPopUpOpened'];
-    }
-  }*/
 };
 </script>
 

@@ -36,7 +36,7 @@
           Электронная библиотека {{ timestamp }}
         </p>
         <p class="footer__info-create">
-          Сделано почти на коленке
+          Сделано ospas312@yandex.ru
         </p>
       </div>
     </Container>
